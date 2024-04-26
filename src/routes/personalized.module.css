@@ -1,164 +1,154 @@
-.mainContainer {
-    height: 1000px;
-}
-
-.title {
-    border: 5px solid black;
-    padding-top: 75px;
-}
-
-.firstContainer {
-    height: 500px;
-    display: block;
-}
-
 .recommend {
-    /*position: relative;*/
-    /*top: 75px;*/
-    /*padding-top: 75px;*/
-    display: inline-block;
-    background-color: #a690be;
+    padding-top: 90px;
     width: 100%;
     height: 500px;
-    color: white;
-    text-align: center;
-    align-content: center;
+    background-image: linear-gradient(to bottom, #a6e1ec, #f1efe9) ;
 }
 
-/*.example {*/
-/*    border: 5px solid black;*/
-/*    width: 100%;*/
-/*}*/
+.recommend_title_container {
+    display: flex;
+    flex-direction: column; /* 제목과 부제목을 세로로 배치 */
+    align-items: center; /* 세로 축 중앙 정렬 */
+    width: 100%; /* 전체 너비 사용 */
+    margin-bottom: 20px;
+}
 
+.recommend_main_title {
+    font-size: 24px; /* 주 제목 크기 */
+    font-weight: bold; /* 글씨 굵기 */
+    color: black; /* 글씨 색상 */
+    margin-right: 20px; /* 오른쪽 여백 */
+}
 
-.recommendCategory1 {
-    display: grid;
+.recommend_sub_title {
+    font-size: 16px; /* 부 제목 크기 */
+    color: black; /* 글씨 색상 */
+}
+
+.recommend_button_container {
     float: left;
-    border: 5px solid black;
-    width: 30%;
-    height: 100%;
-    /*margin: 10px;*/
-    /*align-content: center;*/
-    /*grid-template-columns: repeat(3, 1fr); !* 3개의 열을 가진 그리드로 설정*!*/
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 박스 배치 */
+    justify-content: space-around;
+    width: 20%;
+    height: 250px;
 }
 
-.recommendButton {
-    /*!*padding-top: 80px;*!*/
-    display: grid;
-    /*!*float: right;*!*/
-    border: 5px solid black;
-    /*width: auto;*/
-    /*height: 170px;*/
-    margin: 5px;
-    /*align-self: center;*/
-    color: black;
-    /*align-content: center;*/
+.recommend_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin: 10px;
+    height: 250px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
 }
 
-.recommendCategory2 {
-    border: 5px solid white;
-    display: inline;
+.recommend_boxes_container {
     float: right;
-    /*align-content: center;*/
-    width: 70%;
-    height: 100%;
+    display: flex;
+    flex-direction: row; /* 가로 방향으로 박스 배치 */
+    justify-content: space-around; /* 요소들 사이의 공간을 균등하게 배치 */
+    width: 80%;
+    transition: transform 0.3s ease; /* 부드러운 전환 효과 */
 }
 
-.recommendContent1 {
-    border: 5px solid white;
-    display: inline-grid;
-    width: 30%;
-    height:95%;
+.recommend_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* 모든 박스가 동일한 비율로 나눠짐 */
     margin: 10px;
+    height: 250px;
+    background-color: #2a99cc;
+    box-sizing: border-box;
+    transition: transform 0.3s ease; /* 부드러운 확대/축소 효과 */
 }
 
-.recommendContent2 {
-    border: 5px solid black;
-    /*width: 100%;*/
-    height: 100%;
+.recommend_box:hover {
+    transform: scale(1.1); /* 확대 효과 */
+    z-index: 10; /* 다른 요소 위에 위치 */
+}
+
+.recommend_box:not(:hover) {
+    transform: scale(0.9); /* 나머지 박스는 축소 효과 */
+    opacity: 0.8; /* 투명도를 줄여 다른 박스 강조 */
+}
+
+.custom{
 
 }
 
-.secondContainer {
-    height: 300px;
-}
-
-.secondContainerContent {
-    /*display: inline-grid;*/
-    border: 3px solid black;
+.custom_title_container {
+    display: flex;
+    flex-direction: column; /* 가로 방향으로 박스 배치 */
+    justify-content: space-around; /* 요소들 사이의 공간을 균등하게 배치 */
+    /*float: ;*/
     width: 100%;
-    height: 100%;
-    align-content: center;
-}
-
-.RandomContainer {
-    /*position: relative;*/
-    /*float: left;*/
-    /*bottom: 10px;*/
-    /*right: 10px;*/
+    transition: transform 0.3s ease; /* 부드러운 전환 효과 */
     border: 5px solid black;
-    background-color: #aac4f6;
-    width: 100%;
-    height: 100%;
-    color: white;
-    /*display: inline-grid;*/
-    align-content: center;
+    /*text-align: center;*/
+    /*padding-right: 750px;*/
 }
 
-.RandomContent {
-    border: 5px solid black;
-    display: inline-grid;
-    width: 23%;
-    height: 90%;
-    /*padding: 5px;*/
-    margin: 10px;
-    align-content: center;
-}
-
-/*.SearchByAgeContainer {*/
-/*    height: 300px;*/
-/*}*/
-
-/*.SearchByAge {*/
-/*    !*position: relative;*!*/
-/*    float: right;*/
-/*    !*bottom: 10px;*!*/
-/*    left: 10px;*/
-/*    background-color: #d96060;*/
-/*    color: white;*/
-/*    width: 50%;*/
-/*    height: 300px;*/
-
-/*}*/
-
-.thirdContainer {
-    height: 300px;
-}
-
-.RestaurantMain {
-    /*position: relative;*/
-    /*display: flex;*/
-    bottom: 10px;
-    background-color: #0e2868;
-    color: white;
-    width: 100%;
-    height: 300px;
-    padding: 10px;
-}
-
-.RestaurantCategory {
-   border: 5px solid black;
-   width: 100%;
-   height: auto;
-}
-
-.RestaurantContent {
-    display: inline-grid;
-    width: 32%;
-    height: 160px;
-    border: 5px solid black;
-    background-color: #f0f5fe;
+.custom_title {
+    font-size: 24px;
+    font-weight: bold;
     color: black;
-    margin: 5px;
-    align-content: center;
+    margin-right: 20px;
+    float: left;
+    text-align: left;
+    padding-left: 22%;
+    /*justify-content: center;*/
+}
+
+.custom_sub_title {
+    font-size: 16px;
+    color: black;
+    text-align: left;
+    padding-left: 22%;
+}
+
+.custom_button_container {
+    /*display: flex;*/
+    width: 100%;
+    border: 5px solid black;
+}
+
+.custom_button {
+    float: right;
+}
+
+.custom_boxes_container {
+    background: #41dfea;
+    display: flex;
+    flex-direction: row; /* 가로 방향으로 박스 배치 */
+    justify-content: center; /* 요소들 사이의 공간을 균등하게 배치 */
+    margin: 20px auto;
+    padding: 10px 0;
+    width: 80%;
+    transition: transform 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+.custom_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* 모든 박스가 동일한 비율로 나누어짐*/
+    margin: 10px;
+    height: 250px;
+    background: rgba(125, 33, 143, 0.8);
+    box-sizing: border-box;
+    transition: transform 0.3s ease; /* 부드러운 확대/축소 효과 */
+}
+
+.custom_box:hover {
+    transform: scale(1.1); /* 확대 효과 */
+    z-index: 10; /* 다른 요소 위에 위치 */
+}
+
+.custom_box:not(:hover) {
+    transform: scale(0.9); /* 나머지 박스는 축소 효과 */
+    opacity: 0.8; /* 투명도를 줄여 다른 박스 강조 */
 }
