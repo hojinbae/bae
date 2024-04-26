@@ -16,6 +16,7 @@
     /*position: relative;*/
     /*top: 75px;*/
     /*padding-top: 75px;*/
+    display: inline-block;
     background-color: #a690be;
     width: 100%;
     height: 500px;
@@ -31,24 +32,51 @@
 
 
 .recommendCategory1 {
-    /*display: grid;*/
-    /*float: left;*/
-    /*border: 5px solid black;*/
-    /*width: 100%;*/
-    /*height: 190px;*/
+    display: grid;
+    float: left;
+    border: 5px solid black;
+    width: 30%;
+    height: 100%;
+    /*margin: 10px;*/
     /*align-content: center;*/
     /*grid-template-columns: repeat(3, 1fr); !* 3개의 열을 가진 그리드로 설정*!*/
 }
 
-.recommendContent1 {
+.recommendButton {
     /*!*padding-top: 80px;*!*/
-    /*display: grid;*/
+    display: grid;
     /*!*float: right;*!*/
-    /*border: 5px solid black;*/
+    border: 5px solid black;
     /*width: auto;*/
     /*height: 170px;*/
-    /*margin: 5px;*/
+    margin: 5px;
     /*align-self: center;*/
+    color: black;
+    /*align-content: center;*/
+}
+
+.recommendCategory2 {
+    border: 5px solid white;
+    display: inline;
+    float: right;
+    /*align-content: center;*/
+    width: 70%;
+    height: 100%;
+}
+
+.recommendContent1 {
+    border: 5px solid white;
+    display: inline-grid;
+    width: 30%;
+    height:95%;
+    margin: 10px;
+}
+
+.recommendContent2 {
+    border: 5px solid black;
+    /*width: 100%;*/
+    height: 100%;
+
 }
 
 .secondContainer {
@@ -59,36 +87,49 @@
     /*display: inline-grid;*/
     border: 3px solid black;
     width: 100%;
-    height: 92%;
+    height: 100%;
     align-content: center;
 }
 
-.traffic {
+.RandomContainer {
     /*position: relative;*/
-    float: left;
+    /*float: left;*/
     /*bottom: 10px;*/
-    right: 10px;
+    /*right: 10px;*/
+    border: 5px solid black;
     background-color: #aac4f6;
-    width: 50%;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     color: white;
+    /*display: inline-grid;*/
+    align-content: center;
+}
+
+.RandomContent {
+    border: 5px solid black;
+    display: inline-grid;
+    width: 23%;
+    height: 90%;
+    /*padding: 5px;*/
+    margin: 10px;
+    align-content: center;
 }
 
 /*.SearchByAgeContainer {*/
 /*    height: 300px;*/
 /*}*/
 
-.SearchByAge {
-    /*position: relative;*/
-    float: right;
-    /*bottom: 10px;*/
-    left: 10px;
-    background-color: #d96060;
-    color: white;
-    width: 50%;
-    height: 300px;
+/*.SearchByAge {*/
+/*    !*position: relative;*!*/
+/*    float: right;*/
+/*    !*bottom: 10px;*!*/
+/*    left: 10px;*/
+/*    background-color: #d96060;*/
+/*    color: white;*/
+/*    width: 50%;*/
+/*    height: 300px;*/
 
-}
+/*}*/
 
 .thirdContainer {
     height: 300px;
