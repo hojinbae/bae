@@ -6,6 +6,12 @@ import  {useNavigate, useParams} from "react-router-dom";
  function Personalized(props) {
     const navigate = useNavigate();
 
+    const ImageGallery = () => {
+        // 각 박스의 사진들의 URL을 배열에 저장합니다.
+        const boxImages = [
+            []
+        ]
+    }
 
 
     return (
@@ -32,7 +38,11 @@ import  {useNavigate, useParams} from "react-router-dom";
                 <div className={styles.custom_title_container}>
                     <div className={styles.custom_title}>맞춤 여행지</div>
                     <div className={styles.custom_sub_title}>성향에 따른 맞춤형 여행지를 추천해 드립니다.</div>
-                    <div className={styles.custom_button}><button> 다시 추천 받기 </button></div>
+                    <div>
+                        <div className={styles.custom_button}>
+                            <button> 다시 추천 받기 </button>
+                        </div>
+                    </div>
                 </div>
                 <div className={styles.custom_boxes_container}>
                     <div className={styles.custom_box}>랜덤 박스 1</div>

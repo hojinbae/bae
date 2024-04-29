@@ -1,8 +1,9 @@
 .recommend {
     padding-top: 90px;
-    width: 100%;
+    width: 80%;
     height: 500px;
     background-image: linear-gradient(to bottom, #a6e1ec, #f1efe9) ;
+    margin: 0 auto;
 }
 
 .recommend_title_container {
@@ -87,7 +88,7 @@
     /*float: ;*/
     width: 100%;
     transition: transform 0.3s ease; /* 부드러운 전환 효과 */
-    border: 5px solid black;
+    /*border: 5px solid black;*/
     /*text-align: center;*/
     /*padding-right: 750px;*/
 }
@@ -113,11 +114,13 @@
 .custom_button_container {
     /*display: flex;*/
     width: 100%;
-    border: 5px solid black;
+    /*border: 5px solid black;*/
 }
 
 .custom_button {
     float: right;
+    /*border: 5px solid black;*/
+    width: 50%
 }
 
 .custom_boxes_container {
@@ -151,4 +154,39 @@
 .custom_box:not(:hover) {
     transform: scale(0.9); /* 나머지 박스는 축소 효과 */
     opacity: 0.8; /* 투명도를 줄여 다른 박스 강조 */
+}
+
+.chart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #e37373;
+    width: 80%;
+    margin: 0 auto;
+    height: 300px;
+}
+
+.traffic_chart_title_container {
+    /*border: 5px solid black;*/
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.traffic_chart {
+    /*border: 5px solid black;*/
+    height: 90%;
+}
+
+.search_chart_title_container {
+    /*border: 5px solid black;*/
+    float: right;
+    width: 50%;
+    height: 100%;
+}
+
+.search_chart {
+    /*border: 5px solid black;*/
+    height: 90%;
 }
