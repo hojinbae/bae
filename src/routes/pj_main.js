@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import styles from './PJmain.module.css';
 import SimpleSlider from "./SimpleSliderMain";
 import axios from "axios";
+import SearchWordChart from "./SearchWordChart";
+import AgeChart from "./AgeChart";
 
 
 const PJmain = () => {
@@ -203,14 +205,6 @@ const PJmain = () => {
             </div>
             <div className={styles.btnAuto}>
             </div>
-            {/*<div className={styles.best}>*/}
-            {/*    <div className={styles.best_box}>*/}
-            {/*        여기에 인기글 넣을거지*/}
-            {/*    </div>*/}
-            {/*    <div className={styles.best_box}>*/}
-            {/*        여기에 날씨 넣을꺼지*/}
-            {/*    </div>*/}
-            {/*</div>*/}
 
             {/* <!-- ================================ 추천 / 날씨 =============================== --> */}
 
@@ -254,7 +248,7 @@ const PJmain = () => {
                                         <div className="exp-hover"></div>
                                         <div className="exp-main">
                                             <div className="weekly-forecast">
-
+                                                <SearchWordChart />
                                             </div>
 
 
