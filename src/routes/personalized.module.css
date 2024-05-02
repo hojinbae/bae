@@ -306,7 +306,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: #e37373;
+    /*background-color: #e37373;*/
     width: 80%;
     margin: 0 auto;
     height: 300px;
