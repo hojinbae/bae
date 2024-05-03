@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { VictoryChart, VictoryBar, VictoryTheme, VictoryAxis } from 'victory';
+import { VictoryChart, VictoryBar, VictoryTheme, VictoryAxis,VictoryLabel } from 'victory';
 
 const SearchWordChart = () => {
     // useState 훅을 사용하여 sampleData 상태와 이를 업데이트하는 함수를 생성합니다.
@@ -39,26 +39,38 @@ const SearchWordChart = () => {
     }, []); // useEffect의 두 번째 매개변수로 빈 배열을 전달하여 한 번만 실행되도록 설정합니다.
 
     return (
-        <VictoryChart theme={VictoryTheme.material} domainPadding={{ x: 10 }}>
-            <VictoryAxis // x 레이블
-                tickValues={sampleData.map(data => data.keyword)} // 키워드를 x축 레이블로 사용
-            />
-            <VictoryAxis dependentAxis // y 레이블
-                         tickFormat={(tick) => `${tick}`} // 숫자 형태로 표시
-            />
-            {sampleData.map((data, index) => (
-                <VictoryBar
-                    key={index}
-                    horizontal
-                    style={{
-                        data: { fill: data.color }
-                    }}
-                    data={[data]}
-                    x="keyword"
-                    y="count"
+        <div>
+            <h4>서울에서 주요 도시까지의 소요 시간</h4>
+            <VictoryChart theme={VictoryTheme.material} domainPadding={{x: 10}}
+                          style={{parent: {background: "#fff", border: "1px solid #ccc"}}}>
+                {/* 제목 추가 */}
+
+                {/* X 축 라벨 추가 */}
+                <VictoryAxis
+                    tickValues={sampleData.map(data => data.keyword)}
+                    label="Keywords"
+                    style={{axisLabel: {padding: 30}}}
                 />
-            ))}
-        </VictoryChart>
+                {/* Y 축 라벨 추가 */}
+                <VictoryAxis dependentAxis
+                             tickFormat={(tick) => `${tick}`}
+                             label="Count"
+                             style={{axisLabel: {padding: 40}}}
+                />
+                {sampleData.map((data, index) => (
+                    <VictoryBar
+                        key={index}
+                        horizontal
+                        style={{
+                            data: {fill: data.color}
+                        }}
+                        data={[data]}
+                        x="keyword"
+                        y="count"
+                    />
+                ))}
+            </VictoryChart>
+        </div>
     );
 };
 
