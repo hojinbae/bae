@@ -80,7 +80,7 @@ function Personalized(props) {
             [shuffledImages[i], shuffledImages[j]] = [shuffledImages[j], shuffledImages[i]];
         }
         // 처음 4개의 이미지 선택
-        const selectedImages = shuffledImages.slice(0, 4);
+        const selectedImages = shuffledImages.slice(0, 5);
         // 상태 업데이트
         setBoxImages(selectedImages);
     };
@@ -125,11 +125,6 @@ function Personalized(props) {
                     <div className={styles.custom_title_container}>
                         <div className={styles.custom_title}>맞춤 여행지</div>
                         <div className={styles.custom_sub_title}>성향에 따른 맞춤형 여행지를 추천해 드립니다.</div>
-                        <div>
-                            <div className={styles.custom_button_div}>
-                                <button className={styles.custom_button} onClick={handleReloadImages} > 다시 추천 받기 </button>
-                            </div>
-                        </div>
                     </div>
                     <div className={styles.custom_boxes_container}>
                         {/* 랜덤 박스 이미지 표시 */}
@@ -138,6 +133,11 @@ function Personalized(props) {
                                 <img src={image} alt={`Random Box ${index + 1 }`} />
                             </div>
                         ))}
+                    </div>
+                    <div>
+                        {/*<div className={styles.custom_button_div}>*/}
+                        <button className={styles.custom_button} onClick={handleReloadImages} > 다시 추천 받기 </button>
+                        {/*</div>*/}
                     </div>
                 </div>
 
