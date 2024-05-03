@@ -7,6 +7,10 @@ import styles from './personalized.module.css';
 import axios from "axios";
 import  {useNavigate, useParams} from "react-router-dom";
 import TrafficChart from "./TrafficChart";
+import AgeChart from "./AgeChart";
+import SearchWordChart from "./SearchWordChart";
+
+
 function Personalized(props) {
     const navigate = useNavigate();
 
@@ -140,13 +144,17 @@ function Personalized(props) {
                 <div className={styles.chart}>
                     <div className={styles.traffic_chart_title_container}>
                         <div className={styles.traffic_chart}>
-                            <TrafficChart />
+                            <TrafficChart/>
                         </div>
                     </div>
                     <div className={styles.search_chart_title_container}>
-                        연령별 검색량 차트
                         <div className={styles.search_chart}>
-                            차트2
+                            <AgeChart/>
+                        </div>
+                    </div>
+                    <div className={styles.search_chart_title_container}>
+                        <div className={styles.search_chart}>
+                            <SearchWordChart/>
                         </div>
                     </div>
                 </div>
